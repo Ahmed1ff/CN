@@ -10,9 +10,9 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 app = Flask(__name__)
 
-model = keras.models.load_model('./baby_cry_model_best_new20.keras')
-encoder = joblib.load('./label_encoder_new20.pkl')
-scaler = joblib.load('./scaler_new20.pkl')
+model = keras.models.load_model('./baby_cry_model_best_new20_MMM.keras')
+encoder = joblib.load('./label_encoder_new20_MMM.pkl')
+scaler = joblib.load('./scaler_new20_MMM.pkl')
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
